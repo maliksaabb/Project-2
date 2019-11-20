@@ -12,7 +12,7 @@ CREATE TABLE accounts (
 
 CREATE TABLE profiles (
 
-    id INT (11) AUTO_INCREMENT NOT NULL,
+    userid INT (11) NOT NULL,
     nameFirst VARCHAR(255) NOT NULL,
     nameLast VARCHAR(255) NOT NULL,
     age INT (11) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE profiles (
     timesperday4 INT (11),
 
     specialNeeds VARCHAR (5000) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (userid)
 
 );
 
