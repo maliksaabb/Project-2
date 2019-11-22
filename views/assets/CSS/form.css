@@ -1,0 +1,16 @@
+
+body {
+    background-image:url("../images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color:white;
+}
+
+legend {
+    color: white;
+}
+
+.container {
+    background:rgb(59, 100, 112);
+    opacity: 90%;
+}
