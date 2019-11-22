@@ -129,11 +129,65 @@
             </div>
           </div>
           <div class="col-md-4 col-sm-4">
-            <div class="medi-info">
-              <h3>Pill-Bot</h3>
-              <p>I am text block. Edit this text from Appearance / Customize / Homepage header columns. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-              <a href="#" class="medi-info-btn">READ MORE</a>
-            </div>
+            
+              <h3>Pill-Bot <i class="fas fa-capsules"></i></h3>
+
+              <form>
+                <input type="text"> 
+                <input type="submit" value="save">
+              </form>
+            
+              <div id="todo-list"></div>
+            
+              <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+              <script type="text/javascript">
+                var list = JSON.parse(localStorage.getItem("todolist"));
+                // Checks to see if the todolist exists in localStorage and is an array currently
+                // If not, set a local list variable to an empty array
+                // Otherwise list is our current list of todos
+                if (!Array.isArray(list)) {
+                  list = [];
+                }
+                function putOnPage() {
+                  $("#todo-list").empty(); // empties out the html
+                  var insideList = JSON.parse(localStorage.getItem("todolist"));
+                  // Checks to see if we have any todos in localStorage
+                  // If we do, set the local insideList variable to our todos
+                  // Otherwise set the local insideList variable to an empty array
+                  if (!Array.isArray(insideList)) {
+                    insideList = [];
+                  }
+                  // render our insideList todos to the page
+                  for (var i = 0; i < insideList.length; i++) {
+                    var p = $("<p>").text(insideList[i]);
+                    var b = $("<button class='delete'>").text("x").attr("data-index", i);
+                    p.prepend(b);
+                    $("#todo-list").prepend(p);
+                  }
+                }
+                // render our todos on page load
+                putOnPage();
+                $(document).on("click", "button.delete", function() {
+                  var todolist = JSON.parse(localStorage.getItem("todolist"));
+                  var currentIndex = $(this).attr("data-index");
+                  // Deletes the item marked for deletion
+                  todolist.splice(currentIndex, 1);
+                  list = todolist;
+                  localStorage.setItem("todolist", JSON.stringify(todolist));
+                  putOnPage();
+                });
+                $("input[type='submit']").on("click", function(event) {
+                  event.preventDefault();
+                  // Setting the input value to a variable and then clearing the input
+                  var val = $("input[type='text']").val();
+                  $("input[type='text']").val("");
+                  // Adding our new todo to our local list variable and adding it to local storage
+                  list.push(val);
+                  localStorage.setItem("todolist", JSON.stringify(list));
+                  putOnPage();
+                });
+              </script>
+              
           </div>
           <div class="col-md-4 col-sm-4 mt-boxy-3">
             <div class="mt-boxy-color"></div>
