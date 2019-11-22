@@ -28,10 +28,6 @@ module.exports = function(app) {
     req.logout();
     res.redirect("/");
   });
-  app.get("/logout", function(req, res) {
-    req.logout();
-    res.redirect("/");
-  });
 //
   // Route for getting some data about our user to be used client side
   app.get("/api/user_data", function(req, res) {
@@ -49,8 +45,11 @@ module.exports = function(app) {
     }
   });
 
-  //end of user authentication GETs and POSTs
 
+
+
+
+  //end of user authentication GETs and POSTs
 
   // Get all examples
   app.get("/api/examples", function(req, res) {
@@ -73,3 +72,4 @@ module.exports = function(app) {
     });
   });
 };
+

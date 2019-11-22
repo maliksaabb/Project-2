@@ -8,28 +8,37 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("index.html");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 //
-  app.get("/login", function(req, res) {
+  app.get("/form", function(req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
-      res.redirect("/members");
+      res.redirect("../views/form.html");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../views/form.html"));
+  });
+  app.get("/signup", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.redirect("../views/signup.html");
+    }
+    res.sendFile(path.join(__dirname, "../views/signup.html"));
   });
 //
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be 
   //redirected to the signup page
-  app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+  app.get("/form", isAuthenticated, function(req, res) {
+    res.sendFile(path.join(__dirname, "../views/form.html"));
   });
-
+};
+/*
   //end of POSTs and GETs for user authentication
   //---------------------------------------------------------------
+  //commenting below out becuase the res.render kept throwing view errors 
   // Load index page
   app.get("/", function(req, res) {
     db.Example.findAll({}).then(function(dbExamples) {
@@ -54,3 +63,5 @@ module.exports = function(app) {
     res.render("404");
   });
 };
+
+*/

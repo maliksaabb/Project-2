@@ -1,5 +1,5 @@
 //bcrypt necessary for password hatching
-var bcrypt = require("bcrypt-nodejs");
+var bcrypt = require("bcryptjs");
 
 //creating user model
 //setting as export because we will need it required on the server
@@ -18,7 +18,8 @@ module.exports = function(sequelize,DataTypes) {
             type: DataTypes.STRING,
             allowNull: false
         }
-    });
+    }
+    );
     //Determining if a hashed password entered compares to
     //a hased password stored in the database
     User.prototype.validPassword = function(password) {
@@ -35,4 +36,4 @@ module.exports = function(sequelize,DataTypes) {
   
     return User;
     
-}
+};
