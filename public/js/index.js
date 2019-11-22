@@ -34,7 +34,7 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
-//--------------------------------------------------------------------------------------------------------------
+//-------------------------------------------------------------------
 //END imported from sequelize index.js template
 /*
 // The API object contains methods for each kind of request we'll make
