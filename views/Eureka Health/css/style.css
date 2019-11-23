@@ -26,6 +26,11 @@ h1, h2, h3, h4, h5, h6
 	font-weight: 600;
 	color: #222222;
 }
+
+input{
+    background:rgb(186, 201, 217);
+}
+
 a, a:hover, a:focus, a:active{
     outline: none;
 }
@@ -205,21 +210,32 @@ cta-1
 ******************/
 .schedule-tab {
 	background-color: #0CB8B6;
-	float: left;
+    float: left;
+    padding-bottom: 60px;
 }
 .medi-info{
-	border-right: 1px solid #fff;
+    margin-top: 0px;
+	/*border-right: 1px solid #fff;*/
 }
+
+.yoga, h3{
+    color: #fff;
+	font-weight: 600;
+}
+
+
+
 .medi-info, .time-info{
-    
-	padding: 20px;
+	padding: 0px;
 	color: #fff;
 }
+
 .medi-info h3, .time-info h3{
 	padding-bottom: 16px;
 	color: #fff;
 	font-weight: 600;
 }
+
 .medi-info-btn, .medi-info-btn:hover, .medi-info-btn:focus {
     margin: 15px 0px 5px;
     display: inline-block;
@@ -509,6 +525,7 @@ footer
     border: 0px;
     border-bottom: 1px solid #fff;
     }
+
     .service-info{
         margin-top: 20px;
         margin-bottom: 0px;
