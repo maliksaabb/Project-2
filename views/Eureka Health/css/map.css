@@ -1,0 +1,20 @@
+
+html,
+body,
+#map-canvas {
+    margin-top: 50px;
+    padding: 0;
+    height: 500px;
+    width:1250px;
+    margin-left:25px;
+    background: rgb(59, 100, 112)
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+	color: white;
+}
+
+
