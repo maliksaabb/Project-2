@@ -28,6 +28,8 @@ $(document).ready(function() {
       email: email,
       password: password
     }).then(function(data) {
+      window.location.href = "/form";
+     // window.location.replace(data);
       console.log(data);
       // If there's an error, handle it by throwing up a boostrap alert
     }).catch(handleLoginErr);

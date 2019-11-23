@@ -3,6 +3,7 @@ var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+
 //-------------------------------------------------------------------
 //START imported from sequelize index.js template
 const config = require(__dirname + "/../config/config.json")[env];

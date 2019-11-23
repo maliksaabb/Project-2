@@ -4,20 +4,20 @@
 <head>
 
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="form">
     <meta name="author" content="form">
 
 
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
             <title>User profile Page</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/CSS/form.css">
+   <link rel="stylesheet" type ="text/css" href="stylesheets/form.css">
     <style>
         body {
             padding-top: 70px;
@@ -34,7 +34,7 @@
     <div class="container">
     <div class="row">
     <div class="col-md-10 ">
-    <form class="form-horizontal">
+    <form id = "profileform" class="form-horizontal">
     <fieldset>
 
 <!-- Form Name -->
@@ -50,14 +50,12 @@
         <i class="fa fa-user">
         </i>
        </div>
-       <input id="Name (Full name)" name="Name (Full name)" type="text" placeholder="Name (Full name)" class="form-control input-md">
+       <input id="profilename" name="Name (Full name)" type="text" placeholder="Name (Full name)" class="form-control input-md">
       </div>
-
-    
   </div>
-
-  
 </div>
+
+
 
 <!-- File Button --> 
 <div class="form-group">
@@ -77,7 +75,7 @@
      <i class="fa fa-birthday-cake"></i>
         
        </div>
-       <input id="Date Of Birth" name="Date Of Birth" type="text" placeholder="Date Of Birth" class="form-control input-md">
+       <input id="profilebday" name="Date Of Birth" type="text" placeholder="Date Of Birth" class="form-control input-md">
       </div>
   
     
@@ -92,15 +90,15 @@
   <label class="col-md-4 control-label" for="Gender">Gender</label>
   <div class="col-md-4"> 
     <label class="radio-inline" for="Gender-0">
-      <input type="radio" name="Gender" id="Gender-0" value="1" checked="checked">
+      <input type="radio" name="Gender" id="gender-male" value="1" checked="checked">
       Male
     </label> 
     <label class="radio-inline" for="Gender-1">
-      <input type="radio" name="Gender" id="Gender-1" value="2">
+      <input type="radio" name="Gender" id="gender-female" value="2">
       Female
     </label> 
     <label class="radio-inline" for="Gender-2">
-      <input type="radio" name="Gender" id="Gender-2" value="3">
+      <input type="radio" name="Gender" id="gender-other" value="3">
       Other
     </label>
   </div>
@@ -111,7 +109,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label col-xs-12" for="Height">Height</label>  
   <div class="col-md-2  col-xs-4">
-  <input id="Height" name="Height" type="text" placeholder="6'0" class="form-control input-md ">
+  <input id="profileheight" name="Height" type="text" placeholder="6'0" class="form-control input-md ">
   </div>
 
 
@@ -122,7 +120,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Weight">Weight (lbs)</label>  
   <div class="col-md-2  col-xs-4">
-  <input id="Weight" name="Weight" type="text" placeholder="185" class="form-control input-md ">
+  <input id="profileweight" name="Weight" type="text" placeholder="185" class="form-control input-md ">
   
   </div>
 </div>
@@ -132,7 +130,7 @@
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label"  for="Blood Type">Blood Type </label>  
-  <select style="margin-left: 16px">
+  <select id = "profileblood" type="text" style="margin-left: 16px">
     <option value="A+">A+</option>
     <option value="A-">A-</option>
     <option value="B+">B+</option>
@@ -148,7 +146,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Overview (max 200 words)">Allergies:</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="Overview (max 200 words)"placeholder="Peanut, Pollen, Animals, Etc.."></textarea>
+    <textarea class="form-control" rows="10"  id="profileallergies" name="Overview (max 200 words)"placeholder="Peanut, Pollen, Animals, Etc.."></textarea>
   </div>
 </div>
 
@@ -158,7 +156,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="Overview (max 200 words)">Additional Needs:</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" rows="10"  id="Overview (max 200 words)" name="Overview (max 200 words)"placeholder="Recently had knee surgery"></textarea>
+    <textarea class="form-control" rows="10"  id="profileaddnds" name="Overview (max 200 words)"placeholder="Recently had knee surgery"></textarea>
   </div>
 </div>
 

@@ -7,25 +7,33 @@ module.exports = function(app) {
   //start of POSTs and GETs for user authentication
   app.get("/", function(req, res) {
     // If the user already has an account send them to the members page
+    /*
     if (req.user) {
       res.redirect("index.html");
-    }
+    }*/
     res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 //
   app.get("/form", function(req, res) {
     // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("../views/form.html");
-    }
     res.sendFile(path.join(__dirname, "../views/form.html"));
   });
   app.get("/signup", function(req, res) {
     // If the user already has an account send them to the members page
+    /*
     if (req.user) {
       res.redirect("../views/signup.html");
-    }
+    }*/
+
     res.sendFile(path.join(__dirname, "../views/signup.html"));
+  });
+  app.get("/dashboard", function(req, res) {
+    // If the user already has an account send them to the members page
+    /*
+    if (req.user) {
+      res.redirect("../views/Eureka Health/index.html");
+    }*/
+    res.sendFile(path.join(__dirname, "../views/Eureka Health/index.html"));
   });
 //
   // Here we've add our isAuthenticated middleware to this route.

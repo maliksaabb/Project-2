@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({extended:false}));//For body parser
 app.use(bodyParser.json());
 //using sessions to keep track of user's login status
 app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -39,7 +40,7 @@ app.set("view engine", "handlebars");*/ //commented out this section on handleba
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
