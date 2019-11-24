@@ -1,9 +1,10 @@
 
 body {
-    background-image:url("/public/images/background.jpg");
+    background-image:url("images/background.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     color:black;
+    padding-top: 70px;
 }
 
 legend {
@@ -13,4 +14,11 @@ legend {
 .container {
     background:rgb(59, 100, 112);
     opacity: 90%;
+}
+
+.othertop{margin-top:10px;}
+
+img.formlogo {
+    max-width: 18%;
+    max-height: 18%;
 }
