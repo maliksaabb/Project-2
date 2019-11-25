@@ -25,6 +25,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static("public"));//moved from line 15
+app.use(express.static("views"));
 
 // Handlebars
 /*app.engine(
