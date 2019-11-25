@@ -1,14 +1,13 @@
 
 body {
-    background-image:url("images/background.jpg");
+    background-image:url("../img/background.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    color:black;
-    padding-top: 70px;
+    color:white;
 }
 
 legend {
-    color: black;
+    color: white;
 }
 
 .container {
@@ -16,9 +15,9 @@ legend {
     opacity: 90%;
 }
 
-.othertop{margin-top:10px;}
-
-img.formlogo {
-    max-width: 18%;
-    max-height: 18%;
+.login-pg,
+.signup-pg{
+    background-repeat: no-repeat;
+    background-size: 100%;
+    color:white;
 }

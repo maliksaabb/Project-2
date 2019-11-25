@@ -49,13 +49,15 @@ $(document).ready(function() {
   
       // If we're updating a post run updatePost to update a post
       // Otherwise run submitPost to create a whole new post
+      /* commenting out because we aren't updating profile posts
       if (updating) {
         newPost.id = postId;
         updatePost(newPost);
       }
       else {
         submitPost(newPost);
-      }
+      }*/
+
     });
 
     // Submits a new post and brings user to blog page upon completion
@@ -67,26 +69,17 @@ $(document).ready(function() {
     app.post("/api/posts", function(req, res) {
         console.log(req.body);
         db.Post.create({
-          title: req.body.title,
-          body: req.body.body,
-          category: req.body.category
+          name: req.body.name,
+          bday: req.body.bday,
+          gender: req.body.gender,
+          height: req.body.height,
+          weight: req.body.weight,
+          btype: req.body.btype,
+          allergies: req.body.allergies,
+          addneeds: req.body.addneeds
         })
           .then(function(dbPost) {
             res.json(dbPost);
           });
       });
-    // Gets post data for a post if we're editing
-    function getPostData(id) {
-      $.get("/api/posts/" + id, function(data) {
-        if (data) {
-          // If this post exists, prefill our cms forms with its data
-          bday.val(data.title);
-          name.val(data.name);
-          //postCategorySelect.val(data.category);
-          // If we have a post with this id, set a flag for us to know to update the post
-          // when we hit submit
-          updating = true;
-        }
-      });
-    }
   });

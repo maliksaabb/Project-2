@@ -6,6 +6,17 @@ body {
     justify-content: center;
   }
   
+p {
+  color: white;
+}
+.b_in {
+margin-right: 100px;
+}
+
+.b_out {
+margin-left: 100px;
+}
+
   .watch-face {
     height: 125px;
     width: 125px;

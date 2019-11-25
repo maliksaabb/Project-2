@@ -2,12 +2,17 @@
 body {
     background-image:url("../img/background.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+
+    background-size: 100%;
     color:white;
 }
 
 legend {
     color: white;
+}
+.formlogo {
+    width: 15%;
+    height: 15%;
 }
 
 .container {
