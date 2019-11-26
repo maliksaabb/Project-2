@@ -2,7 +2,6 @@
 body {
     background-image:url("../img/background.jpg");
     background-repeat: no-repeat;
-
     background-size: 100%;
     color:white;
 }
@@ -24,5 +23,4 @@ legend {
 .signup-pg{
     background-repeat: no-repeat;
     background-size: 100%;
-    color:white;
 }
