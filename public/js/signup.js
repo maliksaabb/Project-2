@@ -20,6 +20,11 @@ $(document).ready(function() {
     emailInput.val("");
     passwordInput.val("");
   });
+  
+  $.get("/api/user_data").then(function(data) {
+    $(".member-name").text(data.email);
+  });
+  
 
   // Does a post to the signup route. If succesful, we are redirected to the members page
   // Otherwise we log any errors

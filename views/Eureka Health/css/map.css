@@ -3,7 +3,7 @@ html,
 body,
 #map-canvas {
     margin-top: 50px;
-    padding: 0;
+    padding-left: 65px;
     height: 500px;
     width:1250px;
     margin-left:25px;
